@@ -42,7 +42,7 @@ export default {
   font-size: 25px;
   z-index: 2;
   color: white;
-  margin-top: 10px;
+  margin-top: 2%;
 }
 .homeBtn {
   z-index: 2;
