@@ -13,7 +13,14 @@ const routes:RouteRecordRaw[] = [
     {
         path: '/show',
         name: 'shower',
-        component: () => import('@/views/ShowPages.vue')
+        component: () => import('@/views/ShowPages.vue'),
+        redirect: '/show/first',
+        children: [
+            {
+                path: 'first',
+                component: () => import('@/showPages/firstPage.vue')
+            }
+        ]
     },
     {
         // 匹配路由404

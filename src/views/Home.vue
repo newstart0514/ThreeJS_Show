@@ -8,7 +8,7 @@
       />
     </div>
     <div class="infoText">欢迎来到幽离的奇妙之旅</div>
-    <n-button ghost type="success" strong round class="homeBtn">开始探索</n-button>
+    <n-button ghost type="success" strong round class="homeBtn" @click="goToShowPages">开始探索</n-button>
   </div>
   <homeBackground/>
 </template>
@@ -18,7 +18,12 @@ import homeBackground from "@/components/homeBackground.vue";
 
 export default {
   name: "Home",
-  components: {homeBackground}
+  components: {homeBackground},
+  methods: {
+    goToShowPages() {
+      this.$router.replace('/show')
+    }
+  }
 }
 </script>
 
